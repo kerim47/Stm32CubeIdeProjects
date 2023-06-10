@@ -1,0 +1,10 @@
+13:00:13 **** Incremental Build of configuration Debug for project StepperMotorKontrol ****
+make -j8 all 
+arm-none-eabi-size   StepperMotorKontrol.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5604	     20	   1636	   7260	   1c5c	StepperMotorKontrol.elf
+Finished building: default.size.stdout
+ 
+
+13:00:13 Build Finished. 0 errors, 0 warnings. (took 244ms)
+

@@ -1,0 +1,23 @@
+12:28:58 **** Incremental Build of configuration Debug for project NRF24L01Receiver ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "NRF24L01Receiver.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\16008\STM32CubeIDE\workspace_1.8.0\NRF24L01Receiver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NRF24L01Receiver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NRF24L01Receiver.elf
+ 
+arm-none-eabi-size   NRF24L01Receiver.elf 
+arm-none-eabi-objdump -h -S  NRF24L01Receiver.elf  > "NRF24L01Receiver.list"
+arm-none-eabi-objcopy  -O ihex  NRF24L01Receiver.elf  "NRF24L01Receiver.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17268	    128	   1984	  19380	   4bb4	NRF24L01Receiver.elf
+arm-none-eabi-objcopy  -O binary  NRF24L01Receiver.elf  "NRF24L01Receiver.bin"
+Finished building: default.size.stdout
+ 
+Finished building: NRF24L01Receiver.bin
+Finished building: NRF24L01Receiver.hex
+ 
+ 
+Finished building: NRF24L01Receiver.list
+ 
+
+12:29:03 Build Finished. 0 errors, 0 warnings. (took 4s.361ms)
+

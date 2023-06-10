@@ -1,0 +1,10 @@
+16:29:25 **** Build of configuration Debug for project beem_2003 ****
+make -j8 all 
+arm-none-eabi-size   beem_2003.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10468	     20	   1804	  12292	   3004	beem_2003.elf
+Finished building: default.size.stdout
+ 
+
+16:29:26 Build Finished. 0 errors, 0 warnings. (took 610ms)
+

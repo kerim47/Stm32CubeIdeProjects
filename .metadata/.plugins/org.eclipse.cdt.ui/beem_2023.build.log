@@ -1,0 +1,10 @@
+09:54:31 **** Incremental Build of configuration Debug for project beem_2023 ****
+make -j8 all 
+arm-none-eabi-size   beem_2023.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10772	     20	   1804	  12596	   3134	beem_2023.elf
+Finished building: default.size.stdout
+ 
+
+09:54:31 Build Finished. 0 errors, 0 warnings. (took 250ms)
+

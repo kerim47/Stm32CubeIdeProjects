@@ -1,0 +1,22 @@
+11:54:53 **** Incremental Build of configuration Debug for project NRF24 ****
+make -j8 all 
+arm-none-eabi-gcc -o "NRF24.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\16008\STM32CubeIDE\workspace_1.8.0\NRF24\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NRF24.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NRF24.elf
+ 
+arm-none-eabi-size   NRF24.elf 
+arm-none-eabi-objdump -h -S  NRF24.elf  > "NRF24.list"
+arm-none-eabi-objcopy  -O ihex  NRF24.elf  "NRF24.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17080	    160	   1928	  19168	   4ae0	NRF24.elf
+arm-none-eabi-objcopy  -O binary  NRF24.elf  "NRF24.bin"
+Finished building: default.size.stdout
+ 
+Finished building: NRF24.hex
+Finished building: NRF24.bin
+ 
+Finished building: NRF24.list
+ 
+ 
+
+11:54:53 Build Finished. 0 errors, 0 warnings. (took 625ms)
+

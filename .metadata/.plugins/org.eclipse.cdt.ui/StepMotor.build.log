@@ -1,0 +1,53 @@
+11:45:43 **** Incremental Build of configuration Debug for project StepMotor ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:54: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  108 |  HAL_UART_Transmit(&huart1, (uint8_t*)rxData, strlen(rxData), 100); // rxData verisi yolla
+      |                                                      ^~~~~~
+      |                                                      |
+      |                                                      uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:25:
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+../Core/Src/main.c:118:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  118 |  sprintf(txData, "%d", rxData);
+      |  ^~~~~~~
+../Core/Src/main.c:118:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include <string.h>
+  +++ |+#include <stdio.h>
+   26 | /* USER CODE END Includes */
+../Core/Src/main.c:118:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  118 |  sprintf(txData, "%d", rxData);
+      |          ^~~~~~
+      |          |
+      |          uint8_t * {aka unsigned char *}
+../Core/Src/main.c:118:10: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:118:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  118 |  sprintf(txData, "%d", rxData);
+      |                   ~^   ~~~~~~
+      |                    |   |
+      |                    int uint8_t * {aka unsigned char *}
+      |                   %hhn
+arm-none-eabi-gcc -o "StepMotor.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\16008\STM32CubeIDE\workspace_1.8.0\StepMotorControllerWithPyhton\StepMotor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="StepMotor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: StepMotor.elf
+ 
+arm-none-eabi-size   StepMotor.elf 
+arm-none-eabi-objdump -h -S  StepMotor.elf  > "StepMotor.list"
+arm-none-eabi-objcopy  -O ihex  StepMotor.elf  "StepMotor.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8760	    120	   1688	  10568	   2948	StepMotor.elf
+arm-none-eabi-objcopy  -O binary  StepMotor.elf  "StepMotor.bin"
+Finished building: default.size.stdout
+ 
+Finished building: StepMotor.hex
+Finished building: StepMotor.list
+Finished building: StepMotor.bin
+ 
+ 
+ 
+
+11:45:44 Build Finished. 0 errors, 5 warnings. (took 1s.230ms)
+
