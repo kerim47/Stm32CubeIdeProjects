@@ -1,1 +1,1 @@
-Kod çalışmıyorsa => "C:\Users\kerim\STM32CubeIDE\workspace_1.7.0.0\StepMotorControllerWithPyhton\StepMotor\Debug\StepMotor.hex"  -> step motor hexa kodunu çalıştır
+Kod çalışmıyorsa => "StepMotorControllerWithPyhton\StepMotor\Debug\StepMotor.hex"  -> step motor hexa kodunu çalıştır
